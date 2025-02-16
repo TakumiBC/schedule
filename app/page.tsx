@@ -1,101 +1,378 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
+import { format, addDays, isSaturday, isSunday, nextMonday } from "date-fns";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+
+type ClassInfo = {
+  subject: string;
+  startTime: string;
+  endTime: string;
+  teacher: string;
+  room: string;
+};
+
+type Schedule = Record<string, ClassInfo[]>;
+
+const scheduleData: Schedule = {
+  Monday: [
+    {
+      subject: "S+ Chemistry",
+      startTime: "8:30",
+      endTime: "9:10",
+      teacher: "Raincy Pan",
+      room: "R320",
+    },
+    {
+      subject: "Chinese Literature",
+      startTime: "9:20",
+      endTime: "10:00",
+      teacher: "Lele Wu",
+      room: "R320",
+    },
+    {
+      subject: "Optional",
+      startTime: "10:15",
+      endTime: "10:55",
+      teacher: "",
+      room: "R320",
+    },
+    {
+      subject: "S English Literature",
+      startTime: "11:05",
+      endTime: "11:45",
+      teacher: "Luke Harris",
+      room: "R311",
+    },
+    {
+      subject: "Civic Education",
+      startTime: "12:40",
+      endTime: "13:20",
+      teacher: "Ji Gesang",
+      room: "R320",
+    },
+    {
+      subject: "H Algebra 2",
+      startTime: "13:30",
+      endTime: "14:10",
+      teacher: "Seth Xia",
+      room: "R320",
+    },
+    {
+      subject: "H Algebra 2",
+      startTime: "14:20",
+      endTime: "15:00",
+      teacher: "Seth Xia",
+      room: "R320",
+    },
+    {
+      subject: "H Physics",
+      startTime: "15:10",
+      endTime: "15:50",
+      teacher: "Lexie Huang",
+      room: "R320",
+    },
+  ],
+  Tuesday: [
+    {
+      subject: "English Language",
+      startTime: "8:30",
+      endTime: "9:10",
+      teacher: "Luke Harris",
+      room: "R320",
+    },
+    {
+      subject: "H Physics",
+      startTime: "9:20",
+      endTime: "10:00",
+      teacher: "Lexie Huang",
+      room: "R320",
+    },
+    {
+      subject: "H Algebra 2",
+      startTime: "10:15",
+      endTime: "10:55",
+      teacher: "Seth Xia",
+      room: "R320",
+    },
+    {
+      subject: "Chinese Literature",
+      startTime: "11:05",
+      endTime: "11:45",
+      teacher: "Lele Wu",
+      room: "R320",
+    },
+    {
+      subject: "Civic Education",
+      startTime: "12:40",
+      endTime: "13:20",
+      teacher: "Ji Gesang",
+      room: "R320",
+    },
+    {
+      subject: "S English Literature",
+      startTime: "13:30",
+      endTime: "14:10",
+      teacher: "Luke Harris",
+      room: "R311",
+    },
+    {
+      subject: "Physical Education",
+      startTime: "14:20",
+      endTime: "15:00",
+      teacher: "Zhengdong Ni",
+      room: "Field",
+    },
+    {
+      subject: "S+ Chemistry",
+      startTime: "15:10",
+      endTime: "15:50",
+      teacher: "Raincy Pan",
+      room: "R320",
+    },
+  ],
+  Wednesday: [
+    {
+      subject: "H Algebra 2",
+      startTime: "8:30",
+      endTime: "9:10",
+      teacher: "Seth Xia",
+      room: "R320",
+    },
+    {
+      subject: "S+ Biology",
+      startTime: "9:20",
+      endTime: "10:00",
+      teacher: "Jane Qiu",
+      room: "R320",
+    },
+    {
+      subject: "English Language",
+      startTime: "10:15",
+      endTime: "10:55",
+      teacher: "Xiaoru Qin",
+      room: "R320",
+    },
+    {
+      subject: "S English Literature",
+      startTime: "11:05",
+      endTime: "11:45",
+      teacher: "Luke Harris",
+      room: "R311",
+    },
+    {
+      subject: "Chinese Literature",
+      startTime: "12:40",
+      endTime: "13:20",
+      teacher: "Lele Wu",
+      room: "R320",
+    },
+    {
+      subject: "Civic Education",
+      startTime: "13:30",
+      endTime: "14:10",
+      teacher: "Ji Gesang",
+      room: "R320",
+    },
+    {
+      subject: "PE",
+      startTime: "14:20",
+      endTime: "15:00",
+      teacher: "Zhengdong Ni",
+      room: "R320",
+    },
+    {
+      subject: "S+ Chemistry",
+      startTime: "15:10",
+      endTime: "15:50",
+      teacher: "Raincy Pan",
+      room: "R320",
+    },
+  ],
+  Thursday: [
+    {
+      subject: "Art",
+      startTime: "8:30",
+      endTime: "9:10",
+      teacher: "",
+      room: "R320",
+    },
+    {
+      subject: "S English Literature",
+      startTime: "9:20",
+      endTime: "10:00",
+      teacher: "Luke Harris",
+      room: "R311",
+    },
+    {
+      subject: "H Physics",
+      startTime: "10:15",
+      endTime: "10:55",
+      teacher: "Lexie Huang",
+      room: "R320",
+    },
+    {
+      subject: "Chinese Literature",
+      startTime: "11:05",
+      endTime: "11:45",
+      teacher: "Lele Wu",
+      room: "R320",
+    },
+    {
+      subject: "H Algebra 2",
+      startTime: "12:40",
+      endTime: "13:20",
+      teacher: "Seth Xia",
+      room: "R320",
+    },
+    {
+      subject: "H Algebra 2",
+      startTime: "13:30",
+      endTime: "14:10",
+      teacher: "Seth Xia",
+      room: "R320",
+    },
+    {
+      subject: "S+ Biology",
+      startTime: "14:20",
+      endTime: "15:00",
+      teacher: "Jane Qiu",
+      room: "R320",
+    },
+    {
+      subject: "PE",
+      startTime: "15:10",
+      endTime: "15:50",
+      teacher: "Zhengdong Ni",
+      room: "R320",
+    },
+  ],
+  Friday: [
+    {
+      subject: "S English Literature",
+      startTime: "8:30",
+      endTime: "9:10",
+      teacher: "Luke Harris",
+      room: "R311",
+    },
+    {
+      subject: "Chinese Literature",
+      startTime: "9:20",
+      endTime: "10:00",
+      teacher: "Lele Wu",
+      room: "R320",
+    },
+    {
+      subject: "H Physics / S+ Chemistry",
+      startTime: "10:15",
+      endTime: "10:55",
+      teacher: "Lexie Huang / Raincy Pan",
+      room: "R320",
+    },
+    {
+      subject: "Civic Education",
+      startTime: "11:05",
+      endTime: "11:45",
+      teacher: "Ji Gesang",
+      room: "R320",
+    },
+    {
+      subject: "Personal Growth",
+      startTime: "12:40",
+      endTime: "13:20",
+      teacher: "Seth Xia",
+      room: "R320",
+    },
+    {
+      subject: "H Algebra 2",
+      startTime: "13:30",
+      endTime: "14:10",
+      teacher: "Seth Xia",
+      room: "R320",
+    },
+  ],
+};
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [currentDate, setCurrentDate] = useState(() => {
+    const today = new Date();
+    return isSaturday(today) || isSunday(today) ? nextMonday(today) : today;
+  });
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const navigateDay = (direction: "prev" | "next") => {
+    let newDate = addDays(currentDate, direction === "prev" ? -1 : 1);
+    while (isSaturday(newDate) || isSunday(newDate)) {
+      newDate = addDays(newDate, direction === "prev" ? -1 : 1);
+    }
+    setCurrentDate(newDate);
+  };
+
+  const dayName = format(currentDate, "EEEE");
+  const schedule = scheduleData[dayName];
+
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center bg-background px-8">
+      <div className="w-full max-w-6xl px-8 py-10">
+        <h1 className="mb-8 text-center text-3xl font-bold">
+          Thomas Wu&apos;s Schedule
+        </h1>
+        <div className="w-full space-y-6">
+          <div className="flex items-center justify-between">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => navigateDay("prev")}
+            >
+              {" "}
+              <ChevronLeft className="h-6 w-6" />{" "}
+            </Button>
+            <div className="text-center">
+              <h2 className="text-2xl font-medium text-foreground">
+                {dayName}
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                {format(currentDate, "MMMM d, yyyy")}
+              </p>
+            </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => navigateDay("next")}
+            >
+              {" "}
+              <ChevronRight className="h-6 w-6" />{" "}
+            </Button>
+          </div>
+          <Separator />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="mt-8 w-full space-y-6">
+          {schedule?.map((classInfo, index) => (
+            <Card key={index} className="w-full border border-border/50">
+              <CardContent className="p-8">
+                <div className="flex flex-col space-y-2">
+                  <h3 className="text-xl font-semibold">{classInfo.subject}</h3>
+                  <p className="text-md text-muted-foreground">
+                    {classInfo.startTime} - {classInfo.endTime}
+                  </p>
+                  <div className="text-md flex justify-between">
+                    <div>
+                      <p className="text-sm text-muted-foreground">Teacher</p>
+                      <p className="font-medium">{classInfo.teacher}</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Room</p>
+                      <p className="font-medium">{classInfo.room}</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
