@@ -30,7 +30,7 @@ const scheduleData: Schedule = {
       subject: "Chinese Literature",
       startTime: "9:20",
       endTime: "10:00",
-      teacher: "Lele Wu",
+      teacher: "Alisa Wu",
       room: "R320",
     },
     {
@@ -43,7 +43,7 @@ const scheduleData: Schedule = {
     {
       subject: "S English Literature",
       startTime: "11:05",
-      endTime: "11:45",
+      endTime: "11:40",
       teacher: "Luke Harris",
       room: "R311",
     },
@@ -101,8 +101,8 @@ const scheduleData: Schedule = {
     {
       subject: "Chinese Literature",
       startTime: "11:05",
-      endTime: "11:45",
-      teacher: "Lele Wu",
+      endTime: "11:40",
+      teacher: "Alisa Wu",
       room: "R320",
     },
     {
@@ -159,7 +159,7 @@ const scheduleData: Schedule = {
     {
       subject: "S English Literature",
       startTime: "11:05",
-      endTime: "11:45",
+      endTime: "11:40",
       teacher: "Luke Harris",
       room: "R311",
     },
@@ -167,7 +167,7 @@ const scheduleData: Schedule = {
       subject: "Chinese Literature",
       startTime: "12:40",
       endTime: "13:20",
-      teacher: "Lele Wu",
+      teacher: "Alisa Wu",
       room: "R320",
     },
     {
@@ -178,7 +178,7 @@ const scheduleData: Schedule = {
       room: "R320",
     },
     {
-      subject: "PE",
+      subject: "Physical Education",
       startTime: "14:20",
       endTime: "15:00",
       teacher: "Zhengdong Ni",
@@ -217,8 +217,8 @@ const scheduleData: Schedule = {
     {
       subject: "Chinese Literature",
       startTime: "11:05",
-      endTime: "11:45",
-      teacher: "Lele Wu",
+      endTime: "11:40",
+      teacher: "Alisa Wu",
       room: "R320",
     },
     {
@@ -243,11 +243,11 @@ const scheduleData: Schedule = {
       room: "R320",
     },
     {
-      subject: "PE",
+      subject: "Physical Education",
       startTime: "15:10",
       endTime: "15:50",
       teacher: "Zhengdong Ni",
-      room: "R320",
+      room: "Field",
     },
   ],
   Friday: [
@@ -273,10 +273,10 @@ const scheduleData: Schedule = {
       room: "R320",
     },
     {
-      subject: "Civic Education",
+      subject: "Chinese Literature",
       startTime: "11:05",
-      endTime: "11:45",
-      teacher: "Ji Gesang",
+      endTime: "11:40",
+      teacher: "Alisa Wu",
       room: "R320",
     },
     {
