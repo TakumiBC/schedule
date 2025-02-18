@@ -30,7 +30,7 @@ const scheduleData: Schedule = {
       subject: "Chinese Literature",
       startTime: "9:20",
       endTime: "10:00",
-      teacher: "Alisa Wu",
+      teacher: "Ailsa Wu",
       location: "R320",
     },
     {
@@ -81,7 +81,7 @@ const scheduleData: Schedule = {
       subject: "English Language",
       startTime: "8:30",
       endTime: "9:10",
-      teacher: "Xiaoru Qin",
+      teacher: "Kim Qin",
       location: "R320",
     },
     {
@@ -102,7 +102,7 @@ const scheduleData: Schedule = {
       subject: "Chinese Literature",
       startTime: "11:05",
       endTime: "11:40",
-      teacher: "Alisa Wu",
+      teacher: "Ailsa Wu",
       location: "R320",
     },
     {
@@ -153,7 +153,7 @@ const scheduleData: Schedule = {
       subject: "English Language",
       startTime: "10:15",
       endTime: "10:55",
-      teacher: "Xiaoru Qin",
+      teacher: "Kim Qin",
       location: "R320",
     },
     {
@@ -167,7 +167,7 @@ const scheduleData: Schedule = {
       subject: "Chinese Literature",
       startTime: "12:40",
       endTime: "13:20",
-      teacher: "Alisa Wu",
+      teacher: "Ailsa Wu",
       location: "R320",
     },
     {
@@ -218,7 +218,7 @@ const scheduleData: Schedule = {
       subject: "Chinese Literature",
       startTime: "11:05",
       endTime: "11:40",
-      teacher: "Alisa Wu",
+      teacher: "Ailsa Wu",
       location: "R320",
     },
     {
@@ -262,7 +262,7 @@ const scheduleData: Schedule = {
       subject: "Chinese Literature",
       startTime: "9:20",
       endTime: "10:00",
-      teacher: "Lele Wu",
+      teacher: "Ailsa Wu",
       location: "R320",
     },
     {
@@ -276,7 +276,7 @@ const scheduleData: Schedule = {
       subject: "Chinese Literature",
       startTime: "11:05",
       endTime: "11:40",
-      teacher: "Alisa Wu",
+      teacher: "Ailsa Wu",
       location: "R320",
     },
     {
