@@ -150,18 +150,18 @@ const scheduleData: Schedule = {
       location: "R320",
     },
     {
-      subject: "English Language",
+      subject: "S English Literature",
       startTime: "10:15",
       endTime: "10:55",
-      teacher: "Kim Qin",
-      location: "R320",
-    },
-    {
-      subject: "S English Literature",
-      startTime: "11:05",
-      endTime: "11:40",
       teacher: "Luke Harris",
       location: "R311",
+    },
+    {
+      subject: "English Language",
+      startTime: "11:05",
+      endTime: "11:40",
+      teacher: "Kim Qin",
+      location: "R320",
     },
     {
       subject: "Chinese Literature",
