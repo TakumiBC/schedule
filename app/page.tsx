@@ -44,7 +44,7 @@ const scheduleData: Schedule = {
       subject: "English Literature",
       startTime: "11:05",
       endTime: "11:40",
-      teacher: "Luke Harris / Stacie Sulies",
+      teacher: "Luke Harris",
       location: "R320",
     },
     {
@@ -52,7 +52,7 @@ const scheduleData: Schedule = {
       startTime: "12:40",
       endTime: "13:20",
       teacher: "",
-      location: "R320",
+      location: "",
     },
     {
       subject: "H Algebra 2",
@@ -110,13 +110,13 @@ const scheduleData: Schedule = {
       startTime: "12:40",
       endTime: "13:20",
       teacher: "",
-      location: "R320",
+      location: "",
     },
     {
       subject: "English Literature",
       startTime: "13:30",
       endTime: "14:10",
-      teacher: "Luke Harris / Stacie Sulies",
+      teacher: "Luke Harris",
       location: "R320",
     },
     {
@@ -153,7 +153,7 @@ const scheduleData: Schedule = {
       subject: "English Literature",
       startTime: "10:15",
       endTime: "10:55",
-      teacher: "Luke Harris / Stacie Sulies",
+      teacher: "Luke Harris",
       location: "R320",
     },
     {
@@ -175,7 +175,7 @@ const scheduleData: Schedule = {
       startTime: "13:30",
       endTime: "14:10",
       teacher: "",
-      location: "R320",
+      location: "",
     },
     {
       subject: "PE",
@@ -204,7 +204,7 @@ const scheduleData: Schedule = {
       subject: "English Literature",
       startTime: "9:20",
       endTime: "10:00",
-      teacher: "Luke Harris / Stacie Sulies",
+      teacher: "Luke Harris",
       location: "R320",
     },
     {
@@ -255,7 +255,7 @@ const scheduleData: Schedule = {
       subject: "English Literature",
       startTime: "8:30",
       endTime: "9:10",
-      teacher: "Luke Harris / Stacie Sulies",
+      teacher: "Luke Harris",
       location: "R320",
     },
     {
