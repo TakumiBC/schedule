@@ -164,7 +164,7 @@ const scheduleData: Schedule = {
       location: "Field",
     },
     {
-      subject: "H English Laguage Arts",
+      subject: "H English Language Arts",
       startTime: "12:40",
       endTime: "13:20",
       teacher: "Jing Liu",
