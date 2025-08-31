@@ -81,7 +81,7 @@ const scheduleData: Schedule = {
       subject: "AP Computer Science A",
       startTime: "8:30",
       endTime: "9:10",
-      teacher: "Yu Wenjie",
+      teacher: "Wenjie Yu",
       location: "R219",
     },
     {
@@ -154,7 +154,7 @@ const scheduleData: Schedule = {
       startTime: "10:15",
       endTime: "10:55",
       teacher: "Yeqing Li",
-      location: "R320",
+      location: "R415",
     },
     {
       subject: "PE",
@@ -212,7 +212,7 @@ const scheduleData: Schedule = {
       startTime: "10:15",
       endTime: "10:55",
       teacher: "Andersen",
-      location: "R320",
+      location: "R414",
     },
     {
       subject: "Geography",
@@ -259,17 +259,17 @@ const scheduleData: Schedule = {
       location: "R415",
     },
     {
-      subject: "H English Language",
+      subject: "H English Language Arts",
       startTime: "9:20",
       endTime: "10:00",
-      teacher: "Qing Liu",
+      teacher: "Jing Liu",
       location: "R415",
     },
     {
-      subject: "H English Language",
+      subject: "H English Language Arts",
       startTime: "10:15",
       endTime: "10:55",
-      teacher: "Qing Liu",
+      teacher: "Jing Liu",
       location: "R415",
     },
     {
@@ -283,7 +283,7 @@ const scheduleData: Schedule = {
       subject: "Discrete Mathematics",
       startTime: "12:40",
       endTime: "13:20",
-      teacher: "Minglong Yun",
+      teacher: "Minglong Yuan",
       location: "R409",
     },
     {
