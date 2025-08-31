@@ -263,14 +263,14 @@ const scheduleData: Schedule = {
       startTime: "9:20",
       endTime: "10:00",
       teacher: "Jing Liu",
-      location: "R415",
+      location: "R414",
     },
     {
       subject: "H English Language Arts",
       startTime: "10:15",
       endTime: "10:55",
       teacher: "Jing Liu",
-      location: "R415",
+      location: "R414",
     },
     {
       subject: "H English Literature",
