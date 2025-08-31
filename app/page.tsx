@@ -113,7 +113,7 @@ const scheduleData: Schedule = {
       location: "R420",
     },
     {
-      subject: "Arts",
+      subject: "Art",
       startTime: "13:30",
       endTime: "14:10",
       teacher: "Chan Yang",
