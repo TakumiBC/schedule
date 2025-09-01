@@ -27,7 +27,7 @@ const scheduleData: Schedule = {
       location: "R415",
     },
     {
-      subject: "H English Literature",
+      subject: "H World Literature",
       startTime: "9:20",
       endTime: "10:00",
       teacher: "Jon Andreson",
@@ -65,7 +65,7 @@ const scheduleData: Schedule = {
       subject: "Discrete Mathematics",
       startTime: "14:20",
       endTime: "15:00",
-      teacher: "Minglong Yuan",
+      teacher: "Steven Yuan",
       location: "R409",
     },
     {
@@ -99,7 +99,7 @@ const scheduleData: Schedule = {
       location: "R414",
     },
     {
-      subject: "H English Literature",
+      subject: "H World Literature",
       startTime: "11:05",
       endTime: "11:50",
       teacher: "Jon Andreson",
@@ -116,7 +116,7 @@ const scheduleData: Schedule = {
       subject: "Art",
       startTime: "13:30",
       endTime: "14:10",
-      teacher: "Chan Yang",
+      teacher: "Channie Yang",
       location: "Auditorium",
     },
     {
@@ -130,7 +130,7 @@ const scheduleData: Schedule = {
       subject: "Optional Vocal Performance",
       startTime: "15:10",
       endTime: "15:50",
-      teacher: "Chan Yang",
+      teacher: "Channie Yang",
       location: "R016",
     },
   ],
@@ -174,7 +174,7 @@ const scheduleData: Schedule = {
       subject: "Optional Vocal Performance",
       startTime: "13:30",
       endTime: "14:10",
-      teacher: "Chan Yang",
+      teacher: "Channie Yang",
       location: "R016",
     },
     {
@@ -185,7 +185,7 @@ const scheduleData: Schedule = {
       location: "R420",
     },
     {
-      subject: "H English Literature",
+      subject: "H World Literature",
       startTime: "15:10",
       endTime: "15:50",
       teacher: "Jon Andreson",
@@ -208,7 +208,7 @@ const scheduleData: Schedule = {
       location: "R219",
     },
     {
-      subject: "H English Literature",
+      subject: "H World Literature",
       startTime: "10:15",
       endTime: "10:55",
       teacher: "Jon Andreson",
@@ -232,18 +232,18 @@ const scheduleData: Schedule = {
       subject: "Discrete Mathematics",
       startTime: "13:30",
       endTime: "14:10",
-      teacher: "Minglong Yuan",
+      teacher: "Steven Yuan",
       location: "R409",
     },
     {
-      subject: "Personal Growth",
+      subject: "CAS",
       startTime: "14:20",
       endTime: "15:00",
       teacher: "Xinyue Fan",
       location: "R415",
     },
     {
-      subject: "Personal Growth",
+      subject: "CAS",
       startTime: "15:10",
       endTime: "15:50",
       teacher: "Xinyue Fan",
@@ -273,7 +273,7 @@ const scheduleData: Schedule = {
       location: "R414",
     },
     {
-      subject: "H English Literature",
+      subject: "H World Literature",
       startTime: "11:05",
       endTime: "11:50",
       teacher: "Jon Andreson",
@@ -283,7 +283,7 @@ const scheduleData: Schedule = {
       subject: "Discrete Mathematics",
       startTime: "12:40",
       endTime: "13:20",
-      teacher: "Minglong Yuan",
+      teacher: "Steven Yuan",
       location: "R409",
     },
     {
