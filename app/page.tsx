@@ -166,18 +166,18 @@ const scheduleData: Schedule = {
       location: "R209B",
     },
     {
-      subject: "",
+      subject: "H Language Arts",
       startTime: "12:40",
       endTime: "13:20",
-      teacher: "",
-      location: "",
-    },
-    {
-      subject: "H Language Arts",
-      startTime: "13:35",
-      endTime: "14:15",
       teacher: "Yuting Xiao",
       location: "R403",
+    },
+    {
+      subject: "H Chinese Literature",
+      startTime: "13:35",
+      endTime: "14:15",
+      teacher: "Xinyue Fan",
+      location: "R406",
     },
     {
       subject: "H Chinese Literature",
